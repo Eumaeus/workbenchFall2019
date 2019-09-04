@@ -1,17 +1,7 @@
 import scala.io.Source
 import edu.holycross.shot.cite._
 
-
-val filepath:String = "/vagrant/iliad_alignment/iliad_pope.txt"
-val myLines:Vector[String] = Source.fromFile(filepath).getLines.toVector
-
-println(s"\n\nThere are ${myLines.size} lines in myLines\n")
-
-val noBlanks:Vector[String] = myLines.filter(_.size > 0)
-
-println(s"\n\nThere are ${noBlanks.size} lines in noBlanks\n")
-
-val myFavorite:String = noBlanks(1)
+:load utilities.sc
 
 // Characters and Strings
 
@@ -20,6 +10,18 @@ val aChar = 'a'
 val aString = "a"
 
 val anotherString = aChar.toString
+
+val filepath:String = "texts/pride_and_prejudice.txt"
+val myLines:Vector[String] = Source.fromFile(filepath).getLines.toVector
+
+println(s"There are ${myLines.size} lines in ${filepath}")
+
+val noBlanks:Vector[String] = myLines.filter(_.size > 0)
+
+println(s"\n\nThere are ${noBlanks.size} lines in noBlanks\n")
+
+val myFavorite:String = noBlanks(1)
+
 
 // Tokenizing
 

@@ -17,7 +17,7 @@ connectInput in run := true
 
 javaOptions in run ++= Seq(
     "-Xms256M",
-	"-Xmn16M",
+    "-Xmn16M",
     "-Xmx4G"
 )
 
