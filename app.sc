@@ -14,18 +14,21 @@ object MyApp {
  
   /** Our main function where the action happens */
   def main(args: Array[String]) {
+    try {
+
+      if (args.size > 0) {
+        println(s"argument: ${args(0)}")
+      } else {
+        println(s"No argument passed.")
+      }
+
+    } catch {
+      case e:Exception => s"Something went wrong: ${e}"
+    }
 
     def loadFile(fp:String):Vector[String] = {
         Source.fromFile(fp).getLines.toVector
     }
-
-    val punctuation: String = """[“”()\[\]·-…⸁.,; "?·!–—⸂⸃]"""
-    val alphabet: String = """[A-Za-z]"""   
-
-    val filepath:String = "texts/pride_and_prejudice.txt"
-    val myLines:Vector[String] = Source.fromFile(filepath).getLines.toVector
-
-    println(s"""\n There are ${myLines.size} lines in '${filepath}.\n""")
 
   }
 }

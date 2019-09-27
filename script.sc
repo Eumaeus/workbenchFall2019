@@ -25,13 +25,10 @@ val myFavorite:String = noBlanks(1)
 
 // Tokenizing
 
-val myChars:Vector[Char] = myFavorite.toVector
+val myChars: Vector[Char] = myFavorite.toVector
 
-// What would you use to change every one of those Chars to Strings? Map or Filter?
-
-val myShortStrings:Vector[String] = myChars.map(_.toString)
-
-val myWords:Array[String] = myFavorite.split(" ")
+val myWords: Array[String] = myFavorite.split(" ")
+val myWordVec: Vector[String] = myWords.toVector
 
 myWords(0)
 myWords(1)
