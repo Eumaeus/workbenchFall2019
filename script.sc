@@ -1,14 +1,11 @@
 
 // This is one-line comment
 
-val s: String = "Dennis sinned."
+println("Script running…")
 
-val sNoSpace: String = s.replaceAll(" ","")
-val sNoPunc1: String = s.replaceAll(".","")
-val sNoPunc2: String = s.replaceAll("[.]","")
-val sPlus: String = s.replaceAll("[ ,.]","").toLowerCase
+val n: Int = 2
+val twiceN: Int = 2 * 2
 
-sPlus == sPlus.reverse
 
 /* A Custom Function
 		- Accept a String
