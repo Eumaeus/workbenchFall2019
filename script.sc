@@ -1,10 +1,14 @@
 
-// This is one-line comment
-
+// You can print stuff to the screen
 println("Script running…")
 
+// You can declare values in a script, and use them later
 val n: Int = 2
-val twiceN: Int = 2 * 2
+
+// Scala-String: Including Values in a String
+val notAScalaString: String = "n = n"
+val aScalaString: String = s"n = ${n}"
+
 
 
 /* A Custom Function
