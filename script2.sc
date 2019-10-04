@@ -21,13 +21,17 @@ showMe(myLines)
 
 // Using '_'
 
-//val ucUlysses: Vector[String] = myLines.map( _.toUpperCase )
-//showMe( ucUlysses )
+/*
+val ucUlysses: Vector[String] = myLines.map( _.toUpperCase )
+showMe( ucUlysses )
+*/
 
 // Using a value representing each element
 
-//val lcUlysses: Vector[String] = myLines.map( ln => ln.toLowerCase ) 
-//showMe( lcUlysses )
+/*
+val lcUlysses: Vector[String] = myLines.map( ln => ln.toLowerCase ) 
+showMe( lcUlysses )
+*/
 
 // Multi-line .map routines
 
@@ -52,14 +56,17 @@ showMe( summarizedUlysses )
 */
 
 // Simple filters
-//val nums: Vector[Int] = Vector(1,2,3,4,5,6,7,8,9,10)
-//val lessThanFive: Vector[Int] = nums.filter( _ < 5 )
-//val evenNums: Vector[Int] = nums.filter( _ % 2 == 0 )
-//val oddNums: Vector[Int] = nums.filter( _ % 2 != 0 )
+/*
+val nums: Vector[Int] = Vector(1,2,3,4,5,6,7,8,9,10)
+val lessThanFive: Vector[Int] = nums.filter( _ < 5 )
+val evenNums: Vector[Int] = nums.filter( _ % 2 == 0 )
+val oddNums: Vector[Int] = nums.filter( _ % 2 != 0 )
+*/
+
 
 /* Fancy, if you are interested:
 
-	First, the isPrime() Function is not built into Scala.
+	First of all, the isPrime() Function is not built into Scala.
 	See the bottom of utilities.sc
 
 	Second, the Option[Boolean] is a Scala thing.
@@ -71,7 +78,9 @@ showMe( summarizedUlysses )
 
 	Other languages use 'nil' or 'null', but there are
 	problems with this. What *type* is 'nil'?
+
 */
+
 /*
 val moreNums: Vector[Int] = ( 1 to 100 ).toVector
 val primeNums: Vector[Int] = moreNums.filter( n => {
@@ -84,6 +93,7 @@ val primeNums: Vector[Int] = moreNums.filter( n => {
 */
 
 // More complex filters
+
 /*
 val whereUTalksAboutHimself: Vector[String] = myLines.filter( ln => {
 	val words:Vector[String] = ln.split("[ .,;—]").toVector
@@ -101,6 +111,7 @@ v.contains("ee")
 */
 
 // And some stats?
+
 /*
 val allLines: Int = myLines.size - 2 // why?
 val iLines: Int = whereUTalksAboutHimself.size
