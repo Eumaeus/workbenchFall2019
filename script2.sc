@@ -134,5 +134,77 @@ val whatClass: String = splitLine.getClass.toString
 	 …So we always want to go ahead and turn it into a Vector with .toVector
 */
 
+/* The poem is in *iambic pentameter* 
+   (five pairs of unstressed+stressed syllables). 
+   Let's see how that works into the language of the poem. 
+
+   THIS IS SOME ADVANCED STUFF… FOR FUTURE REFERENCE
+*/
+
+/*
+val justPoem: Vector[String] = myLines.dropRight(2)
+// Why did we do this? What did we do? Look at texts/ulysses.txt.
+
+val charactersPerLine: Vector[Int] = {
+	justPoem.map( _.size )
+}
+
+val averageChars: Double = {
+	val allChars: Int = charactersPerLine.sum
+	val allLines: Int = justPoem.size
+	val avg: Double = {
+		allChars.toDouble / allLines.toDouble
+	}
+	avg
+}
+
+val maxChars: Int = charactersPerLine.max
+val minChars: Int = charactersPerLine.min
+
+println( s"\nThe average number of characters per line is ${averageChars}." )
+println( s"\nThe longest line has ${maxChars} characters." )
+println( s"\nThe shortest line has ${minChars} characters." )
 
 
+// the "punctuation" value comes from utilities.sc
+
+val wordsPerLine: Vector[Int] = {
+	justPoem.map( l => {
+		val wordVec: Vector[String] = l.split(punctuation).toVector
+		wordVec.size
+	})
+}
+
+val averageWords: Double = {
+	val allWords: Int = wordsPerLine.sum
+	val allLines: Int = justPoem.size
+	val avg: Double = {
+		averageWords.toDouble / allLines.toDouble
+	}
+	avg
+}
+
+val maxWords: Int = wordsPerLine.max
+val minWords: Int = wordsPerLine.min
+
+println( s"\nThe average number of words per line is ${averageChars}." )
+println( s"\nThe longest line has ${maxWords} words." )
+println( s"\nThe shortest line has ${minWords} words." )
+
+// Get the shortest and longest lines
+val findShorterLine = (x: String, y:String) => {
+	val shorter: String = {
+		if (x.size < y.size) x else y
+	}
+	shorter
+}
+val shortestLine: String = justPoem.reduceLeft(findShorterLine)
+
+val findLongerLine = (x: String, y:String) => {
+	val longer: String = {
+		if (x.size > y.size) x else y
+	}
+	longer
+}
+val longestLine: String = justPoem.reduceLeft(findLongerLine)
+*/
