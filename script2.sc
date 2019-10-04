@@ -179,7 +179,7 @@ val averageWords: Double = {
 	val allWords: Int = wordsPerLine.sum
 	val allLines: Int = justPoem.size
 	val avg: Double = {
-		averageWords.toDouble / allLines.toDouble
+		allWords.toDouble / allLines.toDouble
 	}
 	avg
 }
